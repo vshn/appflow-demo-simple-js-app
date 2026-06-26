@@ -11,7 +11,7 @@ RUN --mount=type=cache,target=/root/.npm \
 
 COPY src/app.ts ./app.ts
 
-FROM node:24-alpine AS firstStage
+FROM node:24-alpine AS firststage
 
 ARG CI_COMMIT_SHA
 
