@@ -6,10 +6,11 @@ spec:
   parameters:
     service:
       version: "11.8"
+      access:
+        - user: first-customer
+          writeConnectionSecretToRef:
+            name: first-customer-mariadb-creds
     size:
       plan: standard-2
-    access:
-      user: myuser
-      database: mydb
   writeConnectionSecretToRef:
     name: mariadb-creds
