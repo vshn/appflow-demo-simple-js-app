@@ -13,14 +13,11 @@ COPY src/app.ts ./app.ts
 
 FROM node:24-alpine AS firststage
 
-ARG CI_COMMIT_SHA
-
 WORKDIR /app
 
 ENV HTTP_PORT=8080
 
 ADD src/marker.txt ./marker.txt
-RUN sh -c 'echo "$CI_COMMIT_SHA" >> "marker.txt"'
 
 FROM firststage AS final
 
