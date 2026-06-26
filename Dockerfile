@@ -22,7 +22,7 @@ ENV HTTP_PORT=8080
 ADD src/marker.txt ./marker.txt
 RUN sh -c 'echo "$CI_COMMIT_SHA" >> "marker.txt"'
 
-FROM firstStage AS final
+FROM firststage AS final
 
 LABEL stage="final"
 
