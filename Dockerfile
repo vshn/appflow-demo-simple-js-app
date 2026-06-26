@@ -43,5 +43,5 @@ VOLUME /var/volume
 HEALTHCHECK --interval=5s --timeout=3s --retries=3 \
   CMD curl --fail http://localhost:${HTTP_PORT}/health || exit 1
 
-ENTRYPOINT ["npm", "run", "start", "--"]
+ENTRYPOINT ["node", "."]
 CMD ["--port", "8080"]
