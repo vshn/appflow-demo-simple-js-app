@@ -10,7 +10,7 @@ services:
       DB_HOST: "$_ref_:first-customer-mariadb-creds:MARIADB_HOST"
       DB_PORT: "$_ref_:first-customer-mariadb-creds:MARIADB_PORT"
       DB_NAME: "$_ref_:first-customer-mariadb-creds:MARIADB_DB"
-      DB_USERNAME: "$_ref_:first-customer-mariadb-creds:MARIADB_USER"
+      DB_USERNAME: "$_ref_:first-customer-mariadb-creds:MARIADB_USERNAME"
       DB_PASSWORD: "$_ref_:first-customer-mariadb-creds:MARIADB_PASSWORD"
 
 x-targetCfg:
