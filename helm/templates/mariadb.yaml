@@ -1,0 +1,15 @@
+apiVersion: vshn.appcat.vshn.io/v1
+kind: VSHNMariaDB
+metadata:
+  name: mariadb-1
+spec:
+  parameters:
+    service:
+      version: "11.8"
+    size:
+      plan: standard-2
+    access:
+      user: myuser
+      database: mydb
+  writeConnectionSecretToRef:
+    name: mariadb-creds

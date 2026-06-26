@@ -1,0 +1,18 @@
+{
+  "name": "kaniko-test-app",
+  "version": "1.0.0",
+  "description": "Test Express app for Kaniko multi-stage build",
+  "main": "app.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node src"
+  },
+  "dependencies": {
+    "express": "5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.6",
+    "@types/node": "24.10.13",
+    "typescript": "5.9.3"
+  }
+}

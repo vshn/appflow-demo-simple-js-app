@@ -1,0 +1,12 @@
+apiVersion: vshn.appcat.vshn.io/v1
+kind: VSHNRedis
+metadata:
+  name: redis-app1-prod
+spec:
+  parameters:
+    service:
+      version: "7.2"
+    size:
+      plan: standard-2
+  writeConnectionSecretToRef:
+    name: redis-creds

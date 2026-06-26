@@ -1,0 +1,11 @@
+services:
+  nginx:
+    image: image-registry.openshift-image-registry.svc:5000/$NAMESPACE/$CI_PROJECT_NAME:$IMAGE_DIGEST
+    ports:
+      - "80:8080"
+    labels:
+      k8ify.expose.80: appflow-demo-simple-js-$CI_COMMIT_REF_SLUG.apps.cloudscale-lpg-2.appuio.cloud
+      k8ify.Ingress.annotations.cert-manager.io/cluster-issuer: letsencrypt-production
+
+x-targetCfg:
+  maxExposeLength: 100
