@@ -10,6 +10,7 @@ spec:
         - user: first-customer
           writeConnectionSecretToRef:
             name: first-customer-mariadb-creds
+            namespace: {{ .Release.Namespace }}
     size:
       plan: standard-2
   writeConnectionSecretToRef:
